@@ -11,30 +11,40 @@ This project implements a machine learning-based disease prediction system using
 ## 📊 Model Description & Performance
 ### Model: Random Forest Classifier
 
-### Evaluation:
+- Evaluation:
 
 5-fold Cross-Validation Accuracy Scores: [0.5497, 0.5468, 0.5322, 0.5365, 0.5249]
 
-### Mean Cross-Validation Accuracy: 53.80%
+- Mean Cross-Validation Accuracy: 53.80%
 
-### Final Test Accuracy: 68.98%
+- Final Test Accuracy: 68.98%
 
 The model demonstrates moderate predictive performance. The difference between cross-validation and test accuracy suggests some overfitting or data variance.
 
-## 💡 Potential Improvements
-To improve model accuracy and robustness:
+## Models Compared
 
-- Experiment with other algorithms such as Gradient Boosting, XGBoost, LightGBM, or Neural Networks.
+This project supports multiple machine learning models for disease prediction:
 
-- Perform hyperparameter tuning (Grid Search, Randomized Search) to optimize model parameters.
+- Random Forest
+- Gradient Boosting
+- XGBoost
+- LightGBM
 
-- Apply feature engineering to add new relevant features or transform existing ones.
+Each model is trained with 5-fold cross-validation, and accuracy scores are shown in the app to help compare performance.
 
-- Address class imbalance with alternative oversampling/undersampling methods or class-weighted algorithms.
+### Current Observations
 
-- Expand dataset size and diversity to enhance generalization.
+| Model              | CV Mean Accuracy |
+|--------------------|------------------|
+| Random Forest      | 0.5590           |
+| Gradient Boosting  | 0.5208     |
+| XGBoost            |  0.5541     |
+| LightGBM           |  0.5553          |
 
-- Use interpretability tools like SHAP or LIME to better understand feature impact.
 
-- Combine multiple models via ensemble methods for improved predictions.
+## How to Improve Further
 
+- Perform hyperparameter tuning with GridSearchCV or RandomizedSearchCV
+- Try neural networks for complex patterns
+- Add more data or features
+- Handle class imbalance with advanced techniques
